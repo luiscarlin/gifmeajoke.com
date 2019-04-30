@@ -1,5 +1,14 @@
+const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+
 module.exports = {
+  entry: {
+    main: './src/index.js',
+  },
+  output: {
+    filename: 'main.js',
+    path: path.resolve('dist/client'),
+  },
   module: {
     rules: [
       {
@@ -40,7 +49,14 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
-      filename: './index.html',
     }),
   ],
+  devServer: {
+    proxy: {
+      '/.netlify': {
+        target: 'http://localhost:9000',
+        pathRewrite: { '^/.netlify/functions': '' },
+      },
+    },
+  },
 }
