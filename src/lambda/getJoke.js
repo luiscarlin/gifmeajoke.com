@@ -1,14 +1,15 @@
 const fetch = require('node-fetch').default
 
+const API_ENDPOINT = 'https://icanhazdadjoke.com/'
+
 exports.handler = function(event, context, callback) {
-  fetch('https://github.com/')
-    .then(res => res.text())
-    .then(body => console.log(body))
-  // your server-side functionality
-  callback(null, {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: `Hello world ${Math.floor(Math.random() * 10)}`,
-    }),
-  })
+  fetch(API_ENDPOINT, { headers: { Accept: 'application/json' } })
+    .then(response => response.json())
+    .then(data =>
+      callback(null, {
+        statusCode: 200,
+        body: data.joke,
+      })
+    )
+    .catch(error => ({ statusCode: 422, body: String(error) }))
 }
