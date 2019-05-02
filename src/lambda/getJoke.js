@@ -3,7 +3,7 @@ const GphApiClient = require('giphy-js-sdk-core')
 
 const API_ENDPOINT = 'https://icanhazdadjoke.com/'
 
-exports.handler = function(event, context, callback) {
+const handler = (event, context, callback) => {
   const client = GphApiClient(process.env.GIPHY_KEY)
 
   const giphyPromise = jokeText => {
@@ -30,3 +30,5 @@ exports.handler = function(event, context, callback) {
       })
     })
 }
+
+export { handler }
