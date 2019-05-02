@@ -1,34 +1,17 @@
-const fetch = require('node-fetch').default
-const GphApiClient = require('giphy-js-sdk-core')
+import fetchJoke from './services/fetch-joke-service'
+import fetchGif from './services/fetch-gif-service'
 
-const API_ENDPOINT = 'https://icanhazdadjoke.com/'
+const handler = async () => {
+  const joke = await fetchJoke()
+  const gifUrl = await fetchGif(joke)
 
-const handler = (event, context, callback) => {
-  const client = GphApiClient(process.env.GIPHY_KEY)
-
-  const giphyPromise = jokeText => {
-    return new Promise((resolve, reject) => {
-      client
-        .translate('gifs', { s: jokeText })
-        .then(payload => resolve(payload.data.embed_url))
-        .catch(error => reject(error))
-    })
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      joke,
+      gifUrl,
+    }),
   }
-
-  fetch(API_ENDPOINT, { headers: { Accept: 'application/json' } })
-    .then(response => response.json())
-    .then(data => data.joke)
-    .then(joke => {
-      giphyPromise(joke).then(gifUrl => {
-        callback(null, {
-          statusCode: 200,
-          body: JSON.stringify({
-            joke,
-            gifUrl,
-          }),
-        })
-      })
-    })
 }
 
 export { handler }
