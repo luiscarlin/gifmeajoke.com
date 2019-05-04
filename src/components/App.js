@@ -7,11 +7,11 @@ function App() {
   const [joke, setJoke] = useState('')
   const [gif, setGif] = useState('')
 
-  const getJoke = async () => {
-    const { joke, gifUrl } = await fetchJoke()
-
-    setJoke(joke)
-    setGif(gifUrl)
+  const getJoke = () => {
+    fetchJoke().then(payload => {
+      setJoke(payload.joke)
+      setGif(payload.gifUrl)
+    })
   }
 
   useEffect(() => {
