@@ -9,6 +9,6 @@ export default async () => {
     })
     return response.data.joke
   } catch (error) {
-    return error
+    console.error(error)
   }
 }

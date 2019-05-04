@@ -52,6 +52,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "axios": "^0.18.0",
+    "core-js": "3",
     "giphy-js-sdk-core": "^1.0.6"
   }
 }
