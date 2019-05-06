@@ -1,5 +1,5 @@
 
 [build]
   command = "yarn build"
-  functions = "dist/server"
-  publish = "dist/client"
+  functions = "lambda"
+  publish = "build"
