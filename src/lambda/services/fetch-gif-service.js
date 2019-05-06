@@ -1,4 +1,5 @@
 import client from 'giphy-js-sdk-core'
+require('dotenv').config()
 
 export default async jokeText => {
   try {
