@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import normalize from 'normalize.css'
 import { createGlobalStyle } from 'styled-components'
-import Main from './Main'
+import Main from './app'
 import * as serviceWorker from './serviceWorker'
 
 const Global = createGlobalStyle`
@@ -16,7 +16,6 @@ const Global = createGlobalStyle`
     box-sizing: inherit;
     margin: 0;
     padding: 0;
-    -webkit-tap-highlight-color: transparent;
   }
   body {
     font-family: 'Nunito Sans', sans-serif;
