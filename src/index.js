@@ -11,6 +11,9 @@ const Global = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -18,10 +21,6 @@ const Global = createGlobalStyle`
     padding: 0;
   }
   body {
-    font-family: 'Nunito Sans', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
     #root {
       height: 100%;
       display: flex;
