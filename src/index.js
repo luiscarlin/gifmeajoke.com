@@ -4,6 +4,7 @@ import normalize from 'normalize.css'
 import { createGlobalStyle } from 'styled-components'
 import Main from './app'
 import * as serviceWorker from './serviceWorker'
+import colors from './colors'
 
 const Global = createGlobalStyle`
   ${normalize}
@@ -17,13 +18,32 @@ const Global = createGlobalStyle`
   }
   *, *:before, *:after {
     box-sizing: inherit;
-    margin: 0;
-    padding: 0;
   }
   body {
-    #root {
-      height: 100%;
-      display: flex;
+    h1 {
+      font-size: 4rem;
+      line-height: 1.5;
+      color: ${colors.primaryFont};
+      margin: 0;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      line-height: 1.5;
+      color: ${colors.secondaryFont};
+      margin: 0;
+
+    }
+  }
+  #root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+
+    @media only screen and (min-width: 901px) {
+      margin: 40px;
     }
   }
 `

@@ -25,6 +25,15 @@ const Card = styled.div`
   }
 `
 
+const Title = styled.header`
+  h1 {
+    letter-spacing: 5px;
+  }
+  h2 {
+    text-align: center;
+  }
+`
+
 export default () => {
   const [joke, setJoke] = useState('')
   const [gif, setGif] = useState('')
@@ -42,8 +51,12 @@ export default () => {
 
   return (
     <>
-      <Card>
-        <h1>{joke}</h1>
+      <Title>
+        <h1>GifMeAJoke</h1>
+        <h2>swipe card for more sweet jokes</h2>
+      </Title>
+      {/* <Card>
+        <div>{joke}</div>
         <iframe
           src={gif}
           height="500"
@@ -52,7 +65,7 @@ export default () => {
           frameBorder="0"
           allowFullScreen
         />
-      </Card>
+      </Card> */}
     </>
   )
 }
