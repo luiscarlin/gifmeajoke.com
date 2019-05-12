@@ -40,11 +40,11 @@ const Global = createGlobalStyle`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px;
+    margin: 20px;
 
-    @media only screen and (min-width: 901px) {
+    /* @media only screen and (min-width: 901px) {
       margin: 40px;
-    }
+    } */
   }
 `
 
