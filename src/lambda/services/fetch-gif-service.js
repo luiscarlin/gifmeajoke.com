@@ -7,7 +7,8 @@ export default async jokeText => {
       s: encodeURI(jokeText),
       weirdness: 0,
     })
-    return response.data.embed_url
+
+    return response.data.images.original.url
   } catch (error) {
     console.error(error)
   }
