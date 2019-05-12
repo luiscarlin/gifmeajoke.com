@@ -32,6 +32,11 @@ const Joke = styled.div`
   margin-bottom: 2rem;
 `
 
+const Gif = styled.iframe`
+  display: block;
+  border: none;
+`
+
 const Title = styled.header`
   h1 {
     letter-spacing: 5px;
@@ -64,14 +69,21 @@ export default () => {
       </Title>
       <Card>
         <Joke>{joke}</Joke>
-        <iframe
+        <Gif
           src={gif}
-          height="500"
-          width="100%"
-          border="none"
-          frameBorder="0"
           allowFullScreen
+          align="center"
+          scrolling="no"
+          allow="autoplay; encrypted-media"
         />
+        {/* <iframe
+            src={gif}
+            height="500"
+            width="100%"
+            border="none"
+            frameBorder="0"
+            allowFullScreen
+          /> */}
       </Card>
     </>
   )
