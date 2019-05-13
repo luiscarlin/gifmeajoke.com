@@ -20,7 +20,7 @@ const Card = styled.div`
   } */
 
   @media only screen and (max-width: 600px) {
-    padding: 40px 20px;
+    padding: 50px 30px;
     /* margin: 20px; */
   }
 `
@@ -86,7 +86,7 @@ export default () => {
           >
             icanhazdadjoke
           </a>{' '}
-          & Gifs via{' '}
+          | Gifs via{' '}
           <a
             href="https://developers.giphy.com/"
             target="_blank"
