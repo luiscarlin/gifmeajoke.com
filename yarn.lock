@@ -8432,10 +8432,10 @@ react-scripts@3.0.0:
   optionalDependencies:
     fsevents "2.0.6"
 
-react-spring@^9.0.0-beta.6:
-  version "9.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-9.0.0-beta.6.tgz#8081f4c934a75e37ded403011e94aed00b3c9303"
-  integrity sha512-wTN1+rK57QKEomEoekXm2IsBPf6KULaqTPKiyEpnoj0NX1pGI1rrMCwLPSZ7FidwqSL54aZLtlZU28nkWQILiQ==
+react-spring@^8.0.20:
+  version "8.0.20"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.20.tgz#e25967f6059364b09cf0339168d73014e87c9d17"
+  integrity sha512-40ZUQ5uI5YHsoQWLPchWNcEUh6zQ6qvcVDeTI2vW10ldoCN3PvDsII9wBH2xEbMl+BQvYmHzGdfLTQxPxJWGnQ==
   dependencies:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"

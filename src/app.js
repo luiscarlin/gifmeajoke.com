@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import fetchJoke from './services/fetch-joke'
 import colors from './colors'
+import { useSpring, animated } from 'react-spring'
 
 const Card = styled.div`
   display: flex;
@@ -44,6 +45,7 @@ const Footer = styled.footer`
 
 const Title = styled.header`
   h1 {
+    text-align: center;
     letter-spacing: 5px;
   }
   h2 {
@@ -66,8 +68,10 @@ export default () => {
     getJoke()
   }, [])
 
+  const fadeIn = useSpring({ from: { opacity: 0 }, opacity: 1 })
+
   return (
-    <>
+    <animated.div style={fadeIn}>
       <Title>
         <h1>GifMeAJoke</h1>
         <h2>swipe card for more sweet jokes</h2>
@@ -114,6 +118,6 @@ export default () => {
           </a>
         </h2>
       </Footer>
-    </>
+    </animated.div>
   )
 }
