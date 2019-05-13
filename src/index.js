@@ -53,7 +53,7 @@ const Global = createGlobalStyle`
       margin: 0;
       color: ${colors.primaryFont};
       line-height: 1.5;
-      font-size: 3rem;
+      font-size: 2.5rem;
 
       @media only screen and (max-width: 900px) {
         font-size: 3.25rem;

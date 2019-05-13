@@ -88,7 +88,7 @@ export default () => {
     <AppContainer style={fadeIn}>
       <Title>
         <h1>GifMeAJoke</h1>
-        <h2>swipe card for more sweet jokes</h2>
+        <h2>Refresh for more sweet jokes</h2>
       </Title>
       <Card>
         <Joke>
