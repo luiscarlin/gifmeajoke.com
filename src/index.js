@@ -21,10 +21,10 @@ const Global = createGlobalStyle`
   }
   body {
     h1 {
-      /* font-size: 4rem; */
       line-height: 1.5;
       color: ${colors.primaryFont};
       margin: 0;
+      font-size: 5rem;
 
       @media only screen and (max-width: 900px) {
         font-size: 5rem;
@@ -39,6 +39,7 @@ const Global = createGlobalStyle`
       line-height: 1.5;
       color: ${colors.secondaryFont};
       margin: 0;
+      font-size: 2rem;
 
       @media only screen and (max-width: 900px) {
         font-size: 2rem;
@@ -52,6 +53,7 @@ const Global = createGlobalStyle`
       margin: 0;
       color: ${colors.primaryFont};
       line-height: 1.5;
+      font-size: 3rem;
 
       @media only screen and (max-width: 900px) {
         font-size: 3.25rem;

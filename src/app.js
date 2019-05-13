@@ -6,14 +6,15 @@ import { useSpring, animated } from 'react-spring'
 
 const Card = styled.div`
   display: flex;
-  /* padding: 40px; */
-  /* max-width: 1000px; */
   width: 100%;
   margin: 0 auto;
   background: ${colors.surface};
   box-shadow: 0 32px 44px 0 rgba(64, 68, 90, 0.2);
   border-radius: 30px;
   flex-direction: column;
+  padding: 80px 50px;
+  min-height: 600px;
+  max-width: 1000px;
 
   @media only screen and (max-width: 900px) {
     padding: 80px 40px;
@@ -23,7 +24,6 @@ const Card = styled.div`
   @media only screen and (max-width: 600px) {
     padding: 50px 30px;
     min-height: 300px;
-    /* margin: 20px; */
   }
 `
 
@@ -55,6 +55,8 @@ const AppContainer = styled(animated.div)`
   height: 100%;
   flex-direction: column;
   align-items: center;
+
+  margin: 40px;
 
   @media only screen and (max-width: 900px) {
     margin: 40px;
