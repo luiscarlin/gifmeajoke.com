@@ -5,7 +5,7 @@ export default async jokeText => {
   try {
     const response = await client(process.env.GIPHY_KEY).translate('gifs', {
       s: encodeURI(jokeText),
-      weirdness: 0,
+      rating: 'pg',
     })
 
     return response.data.images.original.url
