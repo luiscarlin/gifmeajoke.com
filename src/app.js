@@ -15,23 +15,20 @@ const Card = styled.div`
   border-radius: 30px;
   flex-direction: column;
 
-  /* @media only screen and (max-width: 900px) {
-    padding: 20px;
-    margin: 20px;
-  } */
+  @media only screen and (max-width: 900px) {
+    padding: 80px 40px;
+    min-height: 400px;
+  }
 
   @media only screen and (max-width: 600px) {
     padding: 50px 30px;
-    min-height: 40rem;
+    min-height: 300px;
     /* margin: 20px; */
   }
 `
 
 const Joke = styled.div`
-  font-size: 2.25rem;
-  color: ${colors.primaryFont};
-  line-height: 1.5;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 `
 
 const Gif = styled.img`
@@ -40,7 +37,7 @@ const Gif = styled.img`
 `
 
 const Footer = styled.footer`
-  margin-top: 2rem;
+  margin-top: 20px;
   text-align: center;
 `
 
@@ -58,7 +55,14 @@ const AppContainer = styled(animated.div)`
   height: 100%;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+
+  @media only screen and (max-width: 900px) {
+    margin: 40px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 20px;
+  }
 `
 
 export default () => {
@@ -85,7 +89,9 @@ export default () => {
         <h2>swipe card for more sweet jokes</h2>
       </Title>
       <Card>
-        <Joke>{joke}</Joke>
+        <Joke>
+          <p>{joke}</p>
+        </Joke>
         <Gif src={gif} />
       </Card>
       <Footer>

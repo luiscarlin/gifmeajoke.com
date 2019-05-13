@@ -21,17 +21,45 @@ const Global = createGlobalStyle`
   }
   body {
     h1 {
-      font-size: 4rem;
+      /* font-size: 4rem; */
       line-height: 1.5;
       color: ${colors.primaryFont};
       margin: 0;
+
+      @media only screen and (max-width: 900px) {
+        font-size: 5rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 4rem;
+      }
     }
     h2 {
-      font-size: 1.5rem;
       font-weight: normal;
       line-height: 1.5;
       color: ${colors.secondaryFont};
       margin: 0;
+
+      @media only screen and (max-width: 900px) {
+        font-size: 2rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 1.5rem
+      }
+    }
+    p {
+      margin: 0;
+      color: ${colors.primaryFont};
+      line-height: 1.5;
+
+      @media only screen and (max-width: 900px) {
+        font-size: 3.25rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: 2.25rem;
+      }
     }
     a {
       color: ${colors.secondaryFont};
