@@ -44,17 +44,17 @@ const Global = createGlobalStyle`
       transition: all .3s ease-in-out;
     }
   }
-  #root {
+  /* #root {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
 
-    /* @media only screen and (min-width: 901px) {
+    @media only screen and (min-width: 901px) {
       margin: 40px;
-    } */
-  }
+    }
+  }  */
 `
 
 function App() {

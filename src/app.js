@@ -22,6 +22,7 @@ const Card = styled.div`
 
   @media only screen and (max-width: 600px) {
     padding: 50px 30px;
+    min-height: 40rem;
     /* margin: 20px; */
   }
 `
@@ -45,12 +46,19 @@ const Footer = styled.footer`
 
 const Title = styled.header`
   h1 {
-    text-align: center;
     letter-spacing: 5px;
   }
   h2 {
     text-align: center;
   }
+`
+
+const AppContainer = styled(animated.div)`
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 `
 
 export default () => {
@@ -71,7 +79,7 @@ export default () => {
   const fadeIn = useSpring({ from: { opacity: 0 }, opacity: 1 })
 
   return (
-    <animated.div style={fadeIn}>
+    <AppContainer style={fadeIn}>
       <Title>
         <h1>GifMeAJoke</h1>
         <h2>swipe card for more sweet jokes</h2>
@@ -118,6 +126,6 @@ export default () => {
           </a>
         </h2>
       </Footer>
-    </animated.div>
+    </AppContainer>
   )
 }
