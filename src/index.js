@@ -32,7 +32,16 @@ const Global = createGlobalStyle`
       line-height: 1.5;
       color: ${colors.secondaryFont};
       margin: 0;
+    }
+    a {
+      color: ${colors.secondaryFont};
 
+      &:active, &:hover, &:focus {
+        color: ${colors.primaryFont};
+        outline: none;
+      }
+
+      transition: all .3s ease-in-out;
     }
   }
   #root {
