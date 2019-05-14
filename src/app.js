@@ -67,7 +67,7 @@ const AppContainer = styled(animated.div)`
   }
 `
 
-export default () => {
+const useDad = () => {
   const [joke, setJoke] = useState('')
   const [gif, setGif] = useState('')
 
@@ -82,6 +82,11 @@ export default () => {
     getJoke()
   }, [])
 
+  return [joke, gif]
+}
+
+export default () => {
+  const [joke, gif] = useDad()
   const fadeIn = useSpring({ from: { opacity: 0 }, opacity: 1 })
 
   return (
@@ -90,12 +95,14 @@ export default () => {
         <h1>GifMeAJoke</h1>
         <h2>Refresh for more sweet jokes</h2>
       </Title>
+
       <Card>
         <Joke>
           <p>{joke}</p>
         </Joke>
         <Gif src={gif} />
       </Card>
+
       <Footer>
         <h2>
           Jokes from{' '}
@@ -115,6 +122,7 @@ export default () => {
             Giphy
           </a>
         </h2>
+
         <h2>
           Made by{' '}
           <a
