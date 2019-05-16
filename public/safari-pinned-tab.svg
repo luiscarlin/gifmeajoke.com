@@ -1,17 +1,1 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
- preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.11, written by Peter Selinger 2001-2013
-</metadata>
-<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M415 5110 c-152 -31 -295 -141 -360 -277 -58 -122 -55 20 -55 -2278
-1 -2251 -1 -2147 48 -2256 67 -147 217 -263 374 -289 42 -6 770 -10 2154 -10
-1825 0 2098 2 2148 15 209 55 353 210 385 415 9 56 11 617 9 2180 l-3 2105
--23 59 c-63 168 -181 275 -367 334 -30 10 -4263 11 -4310 2z"/>
-</g>
-</svg>
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="17px" height="17px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><path stroke-width="1" stroke="black" d="M49 19 L42 20 L39 21 L37 22 L35 23 L33 24 L32 25 L31 26 L29 27 L28 28 L27 29 L26 30 L26 31 L25 32 L24 33 L24 34 L24 35 L25 35 L27 34 L28 33 L30 32 L32 31 L35 30 L38 29 L42 28 L70 27 L68 26 L67 25 L66 24 L64 23 L62 22 L60 21 L57 20 L50 19 Z" /><path stroke-width="1" stroke="black" d="M57 28 L61 29 L64 30 L66 31 L69 32 L71 33 L72 34 L74 35 L75 35 L75 34 L75 33 L74 32 L73 31 L73 30 L72 29 L70 28 Z" /><path stroke-width="1" stroke="black" d="M30 50 L28 51 L27 52 L27 53 L26 54 L26 55 L25 56 L25 57 L25 58 L25 59 L25 60 L25 61 L25 62 L26 63 L26 64 L26 65 L27 66 L28 67 L29 68 L34 68 L35 67 L36 66 L37 65 L37 64 L37 63 L38 62 L38 61 L38 60 L38 59 L38 58 L38 57 L37 56 L37 55 L37 54 L36 53 L36 52 L35 51 L33 50 Z" /><path stroke-width="1" stroke="black" d="M66 50 L64 51 L63 52 L63 53 L62 54 L62 55 L62 56 L61 57 L61 58 L61 59 L61 60 L61 61 L61 62 L62 63 L62 64 L63 65 L63 66 L64 67 L65 68 L70 68 L71 67 L72 66 L73 65 L73 64 L73 63 L74 62 L74 61 L74 60 L74 59 L74 58 L74 57 L74 56 L73 55 L73 54 L72 53 L72 52 L71 51 L69 50 Z" /></svg>
