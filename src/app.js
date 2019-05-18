@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import fetchJoke from './services/fetch-joke'
 import colors from './colors'
 import { useSpring, animated } from 'react-spring'
+import useDad from './hooks/useDad'
 
 const Card = styled.div`
   display: flex;
@@ -66,24 +66,6 @@ const AppContainer = styled(animated.div)`
     margin: 20px;
   }
 `
-
-const useDad = () => {
-  const [joke, setJoke] = useState('')
-  const [gif, setGif] = useState('')
-
-  const getJoke = () => {
-    fetchJoke().then(payload => {
-      setJoke(payload.joke)
-      setGif(payload.gifUrl)
-    })
-  }
-
-  useEffect(() => {
-    getJoke()
-  }, [])
-
-  return [joke, gif]
-}
 
 export default () => {
   const [joke, gif] = useDad()
