@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 import Card from './components/card'
+import Footer from './components/footer'
 
-const Footer = styled.footer`
+const FooterContainer = styled.footer`
   margin-top: 20px;
   text-align: center;
 `
@@ -44,45 +45,9 @@ export default () => {
         <h2>Refresh for more sweet jokes</h2>
       </Title>
       <Card />
-      <Footer>
-        <h2>
-          Jokes from{' '}
-          <a
-            href="https://icanhazdadjoke.com/api"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            icanhazdadjoke
-          </a>{' '}
-          | Gifs via{' '}
-          <a
-            href="https://developers.giphy.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Giphy
-          </a>
-        </h2>
-
-        <h2>
-          Made by{' '}
-          <a
-            href="https://twitter.com/lgcarlin"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Luis Carlin
-          </a>{' '}
-          | Code on{' '}
-          <a
-            href="https://github.com/luiscarlin/gifmeajoke"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-        </h2>
-      </Footer>
+      <FooterContainer>
+        <Footer />
+      </FooterContainer>
     </AppContainer>
   )
 }
