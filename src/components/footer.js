@@ -1,8 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Footer = styled.footer`
+  margin-top: 20px;
+  text-align: center;
+`
 
 export default () => {
   return (
-    <>
+    <Footer>
       <h2>
         Jokes from{' '}
         <a
@@ -39,6 +45,6 @@ export default () => {
           GitHub
         </a>
       </h2>
-    </>
+    </Footer>
   )
 }

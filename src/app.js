@@ -5,11 +5,6 @@ import Card from './components/card'
 import Footer from './components/footer'
 import Welcome from './components/welcome'
 
-const FooterContainer = styled.footer`
-  margin-top: 20px;
-  text-align: center;
-`
-
 const AppContainer = styled(animated.div)`
   display: flex;
   height: 100%;
@@ -33,9 +28,7 @@ export default () => {
     <AppContainer style={fadeIn}>
       <Welcome />
       <Card />
-      <FooterContainer>
-        <Footer />
-      </FooterContainer>
+      <Footer />
     </AppContainer>
   )
 }
