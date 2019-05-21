@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
-import Card from './components/Card'
-import Footer from './components/Footer'
-import Welcome from './components/Welcome'
+import Card from './components/card'
+import Footer from './components/footer'
+import Welcome from './components/welcome'
 
 const AppContainer = styled(animated.div)`
   display: flex;

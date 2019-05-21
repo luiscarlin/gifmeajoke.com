@@ -1,4 +1,4 @@
-import Card from './Card'
+import Card from './card'
 
 describe('Card', () => {
   it('passes', () => {
