@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import normalize from 'normalize.css'
 import { createGlobalStyle } from 'styled-components'
-import Main from './app'
+import Main from './App'
 import * as serviceWorker from './serviceWorker'
 import colors from './colors'
 
