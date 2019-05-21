@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Footer = styled.footer`
+const FooterContainer = styled.footer`
   margin-top: 20px;
   text-align: center;
 `
 
-export default () => {
+const Footer = () => {
   return (
-    <Footer>
+    <FooterContainer>
       <h2>
         Jokes from{' '}
         <a
@@ -45,6 +45,8 @@ export default () => {
           GitHub
         </a>
       </h2>
-    </Footer>
+    </FooterContainer>
   )
 }
+
+export default Footer
