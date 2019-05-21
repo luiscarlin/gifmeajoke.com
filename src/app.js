@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
-import Card from './components/card'
+import Card from './components/card/card'
 import Footer from './components/footer'
 import Welcome from './components/welcome'
 
