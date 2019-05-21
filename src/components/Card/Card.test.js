@@ -1,7 +1,0 @@
-import Card from './card'
-
-describe('Card', () => {
-  it('passes', () => {
-    expect(1).toBe(1)
-  })
-})
