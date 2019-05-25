@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import colors from '../../colors'
+import colors from '../../styles/colors'
 import useDad from '../../hooks/useDad'
 
 const Card = styled.div`
