@@ -21,7 +21,7 @@ const AppContainer = styled(animated.div)`
   }
 `
 
-export default () => {
+const App = () => {
   const fadeIn = useSpring({ from: { opacity: 0 }, opacity: 1 })
 
   return (
@@ -32,3 +32,5 @@ export default () => {
     </AppContainer>
   )
 }
+
+export default App

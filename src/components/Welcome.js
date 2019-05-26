@@ -10,7 +10,7 @@ const Title = styled.header`
   }
 `
 
-export default () => {
+const Welcome = () => {
   return (
     <Title>
       <h1>GifMeAJoke</h1>
@@ -18,3 +18,5 @@ export default () => {
     </Title>
   )
 }
+
+export default Welcome

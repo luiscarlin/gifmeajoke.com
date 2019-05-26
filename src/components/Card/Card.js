@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import colors from '../../styles/colors'
 import useDad from '../../hooks/useDad'
 
-const Card = styled.div`
+const CardContainer = styled.div`
   display: flex;
   width: 100%;
   margin: 0 auto;
@@ -33,15 +33,17 @@ const Gif = styled.img`
   height: auto;
 `
 
-export default () => {
+const Card = () => {
   const [joke, gif] = useDad()
 
   return (
-    <Card>
+    <CardContainer>
       <Joke>
         <p>{joke}</p>
       </Joke>
       <Gif src={gif} />
-    </Card>
+    </CardContainer>
   )
 }
+
+export default Card
