@@ -22,8 +22,16 @@ describe('fetch gif service', () => {
     giphyJsSdkCore.mockReturnValue({ translate: translateMock })
   })
 
-  it('returns a gif url', async () => {
-    const result = await fetchGifService('some text')
+  it('returns a gif url based on a joke', async () => {
+    const result = await fetchGifService('some joke')
     expect(result).toBe('gif-url')
+  })
+
+  it('requests a pg rated gif that matches some text', async () => {
+    await fetchGifService('some text')
+    expect(translateMock).toHaveBeenCalledWith('gifs', {
+      rating: 'pg',
+      s: 'some%20text',
+    })
   })
 })
