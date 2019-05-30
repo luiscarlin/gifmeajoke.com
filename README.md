@@ -4,7 +4,7 @@
 
 [![CircleCI](https://circleci.com/gh/luiscarlin/gifmeajoke.com.svg?style=svg)](https://circleci.com/gh/luiscarlin/gifmeajoke.com)
 
-An webapp that improves your life by telling you a joke paired with a Gif
+The webapp that improves your life by telling you a joke paired with a Gif
 
 ## How to run
 
