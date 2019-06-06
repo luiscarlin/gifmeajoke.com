@@ -4,10 +4,11 @@ import * as serviceWorker from './serviceWorker'
 import Main from './app.js'
 import GlobalStyle from './styles/GlobalStyle'
 import { ThemeProvider } from 'styled-components'
+import colors from './styles/colors'
 
 function App() {
   return (
-    <ThemeProvider theme={{ mode: 'light' }}>
+    <ThemeProvider theme={colors}>
       <>
         <GlobalStyle />
         <Main />

@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import colors from '../../styles/colors'
 import useDad from '../../hooks/useDad'
 
 const CardContainer = styled.div`
   display: flex;
   width: 100%;
   margin: 0 auto;
-  background: ${colors.surface};
+  background: ${props => props.theme.surface};
   box-shadow: 0 32px 44px 0 rgba(64, 68, 90, 0.2);
   border-radius: 30px;
   flex-direction: column;
