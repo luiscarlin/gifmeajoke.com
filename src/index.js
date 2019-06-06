@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom'
 import * as serviceWorker from './serviceWorker'
 import Main from './app.js'
 import GlobalStyle from './styles/GlobalStyle'
+import { ThemeProvider } from 'styled-components'
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-      <Main />
-    </>
+    <ThemeProvider theme={{ mode: 'light' }}>
+      <>
+        <GlobalStyle />
+        <Main />
+      </>
+    </ThemeProvider>
   )
 }
 
