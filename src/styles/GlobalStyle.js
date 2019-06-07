@@ -1,6 +1,5 @@
 import normalize from 'normalize.css'
 import { createGlobalStyle } from 'styled-components'
-import colors from './colors'
 
 const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -18,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     h1 {
       line-height: 1.5;
-      color: ${colors.primaryFont};
+      color: ${props => props.theme.primaryFont};
       margin: 0;
       font-size: 5rem;
 
@@ -33,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
     h2 {
       font-weight: normal;
       line-height: 1.5;
-      color: ${colors.secondaryFont};
+      color: ${props => props.theme.secondaryFont};
       margin: 0;
       font-size: 2rem;
 
@@ -47,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
     }
     p {
       margin: 0;
-      color: ${colors.primaryFont};
+      color: ${props => props.theme.primaryFont};
       line-height: 1.5;
       font-size: 2.5rem;
 
@@ -60,10 +59,10 @@ const GlobalStyle = createGlobalStyle`
       }
     }
     a {
-      color: ${colors.secondaryFont};
+      color: ${props => props.theme.secondaryFont};
 
       &:active, &:hover, &:focus {
-        color: ${colors.primaryFont};
+        color: ${props => props.theme.primaryFont};
         outline: none;
       }
 

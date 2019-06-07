@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom'
 import * as serviceWorker from './serviceWorker'
 import Main from './app.js'
 import GlobalStyle from './styles/GlobalStyle'
+import { ThemeProvider } from 'styled-components'
+import colors from './styles/colors'
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-      <Main />
-    </>
+    <ThemeProvider theme={colors}>
+      <>
+        <GlobalStyle />
+        <Main />
+      </>
+    </ThemeProvider>
   )
 }
 
