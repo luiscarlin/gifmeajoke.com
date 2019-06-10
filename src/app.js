@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 import Card from './components/Card'
 import Footer from './components/Footer'
 import Welcome from './components/Welcome'
+import { ThemeContext } from './ThemeContext'
 
 const AppContainer = styled(animated.div)`
   display: flex;
@@ -23,9 +24,19 @@ const AppContainer = styled(animated.div)`
 
 const App = () => {
   const fadeIn = useSpring({ from: { opacity: 0 }, opacity: 1 })
+  const { theme, setTheme } = useContext(ThemeContext)
+
+  const toggleTheme = () => {
+    if (theme == 'light') {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+  }
 
   return (
     <AppContainer style={fadeIn}>
+      <button onClick={toggleTheme}>Mode</button>
       <Welcome />
       <Card />
       <Footer />
