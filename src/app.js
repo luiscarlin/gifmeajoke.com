@@ -36,7 +36,7 @@ const App = () => {
 
   return (
     <AppContainer style={fadeIn}>
-      <button onClick={toggleTheme}>Mode</button>
+      <button onClick={toggleTheme}>Switch to {theme}</button>
       <Welcome />
       <Card />
       <Footer />
