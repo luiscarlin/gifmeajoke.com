@@ -19,6 +19,7 @@
     "prettier": "^1.17.0",
     "react-scripts": "^3.0.0",
     "react-spring": "^8.0.20",
+    "react-switch": "^5.0.0",
     "styled-components": "^4.2.0"
   },
   "scripts": {

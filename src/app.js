@@ -5,6 +5,7 @@ import Card from './components/Card'
 import Footer from './components/Footer'
 import Welcome from './components/Welcome'
 import { ThemeContext } from './ThemeContext'
+import Switch from './components/Switch'
 
 const AppContainer = styled(animated.div)`
   display: flex;
@@ -36,7 +37,9 @@ const App = () => {
 
   return (
     <AppContainer style={fadeIn}>
-      <button onClick={toggleTheme}>Switch to {theme}</button>
+      {/* <button onClick={toggleTheme}>Switch to {theme}</button> */}
+      <Switch isChecked={false} onChange={() => console.log('hello')} />
+
       <Welcome />
       <Card />
       <Footer />
