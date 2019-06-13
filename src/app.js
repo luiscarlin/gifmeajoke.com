@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 import Card from './components/Card'
 import Footer from './components/Footer'
 import Welcome from './components/Welcome'
 import { ThemeContext } from './ThemeContext'
-import Toggle from './components/Toggle'
+import Switch from 'react-switch'
 
 const AppContainer = styled(animated.div)`
   display: flex;
@@ -27,19 +27,21 @@ const App = () => {
   const fadeIn = useSpring({ from: { opacity: 0 }, opacity: 1 })
   const { theme, setTheme } = useContext(ThemeContext)
 
+  const [toggle, setToggle] = useState(false)
+
   const toggleTheme = () => {
-    if (theme == 'light') {
+    if (theme === 'light') {
       setTheme('dark')
+      setToggle(true)
     } else {
       setTheme('light')
+      setToggle(false)
     }
   }
 
   return (
     <AppContainer style={fadeIn}>
-      {/* <button onClick={toggleTheme}>Switch to {theme}</button> */}
-      <Toggle isChecked={false} onChange={() => console.log('hello')} />
-
+      <Switch onChange={toggleTheme} checked={toggle} />
       <Welcome />
       <Card />
       <Footer />
