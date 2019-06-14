@@ -7,7 +7,8 @@ const CardContainer = styled(animated.div)`
   display: flex;
   width: 100%;
   margin: 0 auto;
-  background: ${props => props.theme.surface};
+  /* background: ${props => props.theme.surface}; */
+  /* transition: all 0.7 ease-in-out; */
   box-shadow: 0 32px 44px 0 rgba(64, 68, 90, 0.2);
   border-radius: 30px;
   flex-direction: column;
@@ -38,7 +39,7 @@ const Card = () => {
   const fadeIn = useSpring({ from: { opacity: 0 }, opacity: 1 })
 
   return (
-    <CardContainer theme={fadeIn}>
+    <CardContainer style={fadeIn}>
       <Joke>
         <p>{joke}</p>
       </Joke>

@@ -6,7 +6,7 @@ const colors = {
     surface: '#FCFDFE',
   },
   dark: {
-    primaryFont: '#6A7076',
+    primaryFont: '#FCFDFE',
     secondaryFont: '#6A7076',
     background: '#222426',
     surface: '#222426',
