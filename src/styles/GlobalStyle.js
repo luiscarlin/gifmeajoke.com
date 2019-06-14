@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     background: ${props => props.theme.background};
-    transition: background .5s ease-in-out;
+    transition: background .7s ease-in-out;
     h1 {
       line-height: 1.5;
       color: ${props => props.theme.primaryFont};

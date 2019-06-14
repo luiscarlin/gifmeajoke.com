@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import useDad from '../../hooks/useDad'
+import { useSpring, animated } from 'react-spring'
 
-const CardContainer = styled.div`
+const CardContainer = styled(animated.div)`
   display: flex;
   width: 100%;
   margin: 0 auto;
@@ -34,9 +35,10 @@ const Gif = styled.img`
 
 const Card = () => {
   const [joke, gif] = useDad()
+  const fadeIn = useSpring({ from: { opacity: 0 }, opacity: 1 })
 
   return (
-    <CardContainer>
+    <CardContainer theme={fadeIn}>
       <Joke>
         <p>{joke}</p>
       </Joke>
