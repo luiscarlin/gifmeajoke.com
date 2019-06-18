@@ -15,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
+    background: ${props => props.theme.background};
+    transition: all .7s ease-in-out;
     h1 {
       line-height: 1.5;
       color: ${props => props.theme.primaryFont};

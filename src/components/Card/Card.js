@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import useDad from '../../hooks/useDad'
+import { useSpring, animated } from 'react-spring'
 
-const CardContainer = styled.div`
+const CardContainer = styled(animated.div)`
   display: flex;
   width: 100%;
   margin: 0 auto;
-  background: ${props => props.theme.surface};
+  /* background: ${props => props.theme.surface}; */
+  /* transition: all 0.7 ease-in-out; */
   box-shadow: 0 32px 44px 0 rgba(64, 68, 90, 0.2);
   border-radius: 30px;
   flex-direction: column;
@@ -34,9 +36,10 @@ const Gif = styled.img`
 
 const Card = () => {
   const [joke, gif] = useDad()
+  const fadeIn = useSpring({ from: { opacity: 0 }, opacity: 1 })
 
   return (
-    <CardContainer>
+    <CardContainer style={fadeIn}>
       <Joke>
         <p>{joke}</p>
       </Joke>
