@@ -4,7 +4,7 @@ import Switch from 'react-switch'
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useContext(ThemeContext)
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(() => theme === 'dark')
 
   const toggleTheme = () => {
     if (theme === 'light') {
