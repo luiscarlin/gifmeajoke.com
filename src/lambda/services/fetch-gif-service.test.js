@@ -27,10 +27,10 @@ describe('fetch gif service', () => {
     expect(result).toBe('gif-url')
   })
 
-  it('requests a pg rated gif that matches some text', async () => {
+  it('requests a youth rated gif that matches some text', async () => {
     await fetchGifService('some text')
     expect(translateMock).toHaveBeenCalledWith('gifs', {
-      rating: 'pg',
+      rating: 'y',
       s: 'some%20text',
     })
   })
