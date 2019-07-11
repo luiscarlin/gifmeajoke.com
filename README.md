@@ -12,7 +12,7 @@ The webapp that improves your life by telling you a joke paired with a Gif
 # go to https://developers.giphy.com/ and create an app to get an API key
 
 # set the API key in your project
-echo "GIPHY_KEY={YOUR_KEY_HERE}" > .env
+echo "GIPHY_KEY='YOUR_KEY_HERE'" > .env
 
 yarn install
 
