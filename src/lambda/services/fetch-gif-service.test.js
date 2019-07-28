@@ -34,4 +34,17 @@ describe('fetch gif service', () => {
       s: 'some%20text',
     })
   })
+
+  it('returns undefined when no results were found', async () => {
+    translateMock = jest.fn(() =>
+      Promise.resolve({
+        data: {},
+      })
+    )
+
+    giphyJsSdkCore.mockReturnValue({ translate: translateMock })
+
+    const result = await fetchGifService('some joke')
+    expect(result).toBe(undefined)
+  })
 })
