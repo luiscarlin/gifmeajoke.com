@@ -6,5 +6,5 @@ export default async jokeText => {
     .translate('gifs', { s: encodeURI(jokeText), rating: 'pg' })
     .catch(console.error)
 
-  return response.data.images.original.url
+  return response.data.images ? response.data.images.original.url : undefined
 }
