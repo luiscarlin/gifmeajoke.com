@@ -30,7 +30,7 @@ describe('fetch gif service', () => {
   it('requests a youth rated gif that matches some text', async () => {
     await fetchGifService('some text')
     expect(translateMock).toHaveBeenCalledWith('gifs', {
-      rating: 'y',
+      rating: 'pg',
       s: 'some%20text',
     })
   })
