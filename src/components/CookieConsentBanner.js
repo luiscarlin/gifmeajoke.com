@@ -3,23 +3,30 @@ import React from 'react'
 
 const BannerContainer = styled.div`
   width: 100%;
-  background: red;
+  background: black;
   position: fixed;
   bottom: 0px;
   font-size: 4rem;
   text-align: center;
-  padding: 2rem;
+  padding: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.8;
+  p {
+    margin: 0 3rem;
+    color: white;
+  }
 `
 
 const CookieConsentBanner = () => {
   return (
     <BannerContainer>
       <p>This website uses cookies to improve user experience</p>
-      <button onClick={() => alert('you accepted')}>Accept</button>
-      <button onClick={() => alert('you declined')}>Decline</button>
+      <div className="buttons">
+        <button onClick={() => alert('you accepted')}>Accept</button>
+        <button onClick={() => alert('you declined')}>Decline</button>
+      </div>
     </BannerContainer>
   )
 }
