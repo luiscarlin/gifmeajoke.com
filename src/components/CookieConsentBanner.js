@@ -9,6 +9,9 @@ const BannerContainer = styled.div`
   font-size: 4rem;
   text-align: center;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const CookieConsentBanner = () => {
