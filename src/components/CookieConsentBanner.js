@@ -22,7 +22,10 @@ const BannerContainer = styled.div`
 const CookieConsentBanner = () => {
   return (
     <BannerContainer>
-      <p>This website uses cookies to improve user experience</p>
+      <p>
+        Hello there! This website uses cookies to analyze traffic data and
+        improve your experience.
+      </p>
       <div className="buttons">
         <button onClick={() => alert('you accepted')}>Accept</button>
         <button onClick={() => alert('you declined')}>Decline</button>
