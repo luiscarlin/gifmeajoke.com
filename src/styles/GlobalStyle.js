@@ -70,6 +70,11 @@ const GlobalStyle = createGlobalStyle`
 
       transition: all .3s ease-in-out;
     }
+    button {
+      font-size: 2.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
   }
 `
 

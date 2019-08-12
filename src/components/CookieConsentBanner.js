@@ -12,10 +12,15 @@ const BannerContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   p {
     margin: 0 3rem;
     color: white;
+  }
+  button {
+    background: #ffd568;
+  }
+  .buttons {
   }
 `
 
