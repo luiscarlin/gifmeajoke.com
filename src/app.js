@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring'
 import Card from './components/Card'
 import Footer from './components/Footer'
 import Welcome from './components/Welcome'
-import CookieConsentBanner from './components/CookieConsentBanner'
+import ConsentBanner from './components/ConsentBanner'
 
 const AppContainer = styled(animated.div)`
   display: flex;
@@ -30,7 +30,7 @@ const App = () => {
       <Welcome />
       <Card />
       <Footer />
-      <CookieConsentBanner />
+      <ConsentBanner />
     </AppContainer>
   )
 }

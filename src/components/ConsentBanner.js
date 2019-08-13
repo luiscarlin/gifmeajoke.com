@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import React from 'react'
+import { useCookies } from 'react-cookie'
+import reactGA from 'react-ga'
 
 const BannerContainer = styled.div`
   width: 100%;
@@ -24,7 +26,18 @@ const BannerContainer = styled.div`
   }
 `
 
-const CookieConsentBanner = () => {
+const ConsentBanner = () => {
+  const [cookies, setCookie] = useCookies(['consent'])
+
+  if (['accepted', 'declined'].includes(cookies['consent'])) {
+    return null
+  }
+
+  const consentAcceptedHandler = () => {
+    reactGA.initialize('UA-140137818-1')
+    setCookie('consent', 'accepted')
+  }
+
   return (
     <BannerContainer>
       <p>
@@ -32,11 +45,13 @@ const CookieConsentBanner = () => {
         improve your experience.
       </p>
       <div className="buttons">
-        <button onClick={() => alert('you accepted')}>Accept</button>
-        <button onClick={() => alert('you declined')}>Decline</button>
+        <button onClick={consentAcceptedHandler}>Accept</button>
+        <button onClick={() => setCookie('consent', 'declined')}>
+          Decline
+        </button>
       </div>
     </BannerContainer>
   )
 }
 
-export default CookieConsentBanner
+export default ConsentBanner
