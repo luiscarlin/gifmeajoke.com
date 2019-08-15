@@ -53,11 +53,11 @@ const GlobalStyle = createGlobalStyle`
       font-size: 2.5rem;
 
       @media only screen and (max-width: 900px) {
-        font-size: 3.25rem;
+        font-size: 2.25rem;
       }
 
       @media only screen and (max-width: 600px) {
-        font-size: 2.25rem;
+        font-size: 2rem;
       }
     }
     a {
@@ -72,8 +72,12 @@ const GlobalStyle = createGlobalStyle`
     }
     button {
       font-size: 2.5rem;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 2rem;
+      }
+
       font-weight: bold;
-      cursor: pointer;
     }
   }
 `

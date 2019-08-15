@@ -6,23 +6,29 @@ import Button from './Button'
 
 const BannerContainer = styled.div`
   width: 100%;
-  background: black;
+  background: ${props => props.theme.primaryFont};
   position: fixed;
   bottom: 0px;
   font-size: 4rem;
   text-align: center;
-  padding: 4rem;
+  padding: 3rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* opacity: 0.8; */
+  opacity: 0.95;
   p {
-    margin: 0 3rem;
-    color: white;
+    color: ${props => props.theme.background};
   }
 `
 
-const ButtonsContainer = styled.div``
+const ButtonsContainer = styled.div`
+  margin-top: 1rem;
+
+  button {
+    margin: 0 1rem;
+  }
+`
 
 const ConsentBanner = () => {
   const [cookies, setCookie] = useCookies(['consent'])

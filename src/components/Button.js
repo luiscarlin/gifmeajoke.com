@@ -10,11 +10,13 @@ const StyledButton = styled.button`
     props.type === 'primary'
       ? props.theme.primaryFont
       : props.theme.background};
+  cursor: pointer;
+  border: 2px solid;
+  border-color: ${props => props.theme.background};
+  padding: 0.5rem 1.5rem;
 `
 
 const Button = ({ onClick, text, type }) => {
-  console.log(type)
-
   return (
     <StyledButton type={type} onClick={onClick}>
       {text}
