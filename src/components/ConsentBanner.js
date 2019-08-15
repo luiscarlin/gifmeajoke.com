@@ -48,7 +48,11 @@ const ConsentBanner = () => {
       </p>
       <ButtonsContainer>
         <Button onClick={consentDeclineHandler} text={'Decline'} />
-        <Button onClick={consentAcceptedHandler} text={'Accept'} />
+        <Button
+          type={'primary'}
+          onClick={consentAcceptedHandler}
+          text={'Accept'}
+        />
       </ButtonsContainer>
     </BannerContainer>
   )

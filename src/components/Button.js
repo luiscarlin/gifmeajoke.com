@@ -3,11 +3,23 @@ import styled from 'styled-components'
 
 const StyledButton = styled.button`
   background: ${props =>
-    props.primary ? props.theme.surface : props.theme.primaryFont};
+    props.type === 'primary'
+      ? props.theme.background
+      : props.theme.primaryFont};
+  color: ${props =>
+    props.type === 'primary'
+      ? props.theme.primaryFont
+      : props.theme.background};
 `
 
-const Button = ({ onClick, text, mode }) => {
-  return <StyledButton onClick={onClick}>{text}</StyledButton>
+const Button = ({ onClick, text, type }) => {
+  console.log(type)
+
+  return (
+    <StyledButton type={type} onClick={onClick}>
+      {text}
+    </StyledButton>
+  )
 }
 
 export default Button
