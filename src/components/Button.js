@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
-  background: red;
+  background: ${props =>
+    props.primary ? props.theme.surface : props.theme.primaryFont};
 `
 
 const Button = ({ onClick, text, mode }) => {

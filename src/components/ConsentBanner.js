@@ -36,6 +36,10 @@ const ConsentBanner = () => {
     setCookie('consent', 'accepted')
   }
 
+  const consentDeclineHandler = () => {
+    setCookie('consent', 'declined')
+  }
+
   return (
     <BannerContainer>
       <p>
@@ -43,10 +47,7 @@ const ConsentBanner = () => {
         improve your experience.
       </p>
       <ButtonsContainer>
-        <Button
-          onClick={() => setCookie('consent', 'declined')}
-          text={'Decline'}
-        />
+        <Button onClick={consentDeclineHandler} text={'Decline'} />
         <Button onClick={consentAcceptedHandler} text={'Accept'} />
       </ButtonsContainer>
     </BannerContainer>
