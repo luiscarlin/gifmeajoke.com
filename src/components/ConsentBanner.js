@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import React from 'react'
+import React, { useState } from 'react'
 import { useCookies } from 'react-cookie'
 import reactGA from 'react-ga'
 import Button from './Button'
@@ -32,10 +32,7 @@ const ButtonsContainer = styled.div`
 
 const ConsentBanner = () => {
   const [cookies, setCookie] = useCookies(['consent'])
-
-  if (['accepted', 'declined'].includes(cookies['consent'])) {
-    return null
-  }
+  const [displayConsent, setDisplayConsent] = useState(true)
 
   const consentAcceptedHandler = () => {
     reactGA.initialize('UA-140137818-1')
@@ -43,24 +40,30 @@ const ConsentBanner = () => {
   }
 
   const consentDeclineHandler = () => {
-    setCookie('consent', 'declined')
+    setDisplayConsent(false)
+  }
+
+  if (cookies['consent'] === 'accepted') {
+    return null
   }
 
   return (
-    <BannerContainer>
-      <p>
-        Hello there! This website uses cookies to analyze traffic data and
-        improve your experience.
-      </p>
-      <ButtonsContainer>
-        <Button onClick={consentDeclineHandler} text={'Decline'} />
-        <Button
-          type={'primary'}
-          onClick={consentAcceptedHandler}
-          text={'Accept'}
-        />
-      </ButtonsContainer>
-    </BannerContainer>
+    displayConsent && (
+      <BannerContainer>
+        <p>
+          Hello there! This website uses cookies to analyze traffic data and
+          improve your experience.
+        </p>
+        <ButtonsContainer>
+          <Button onClick={consentDeclineHandler} text={'Decline'} />
+          <Button
+            type={'primary'}
+            onClick={consentAcceptedHandler}
+            text={'Accept'}
+          />
+        </ButtonsContainer>
+      </BannerContainer>
+    )
   )
 }
 
