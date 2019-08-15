@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import React from 'react'
 import { useCookies } from 'react-cookie'
 import reactGA from 'react-ga'
+import Button from './Button'
 
 const BannerContainer = styled.div`
   width: 100%;
@@ -19,12 +20,9 @@ const BannerContainer = styled.div`
     margin: 0 3rem;
     color: white;
   }
-  button {
-    background: #ffd568;
-  }
-  .buttons {
-  }
 `
+
+const ButtonsContainer = styled.div``
 
 const ConsentBanner = () => {
   const [cookies, setCookie] = useCookies(['consent'])
@@ -44,12 +42,13 @@ const ConsentBanner = () => {
         Hello there! This website uses cookies to analyze traffic data and
         improve your experience.
       </p>
-      <div className="buttons">
-        <button onClick={consentAcceptedHandler}>Accept</button>
-        <button onClick={() => setCookie('consent', 'declined')}>
-          Decline
-        </button>
-      </div>
+      <ButtonsContainer>
+        <Button
+          onClick={() => setCookie('consent', 'declined')}
+          text={'Decline'}
+        />
+        <Button onClick={consentAcceptedHandler} text={'Accept'} />
+      </ButtonsContainer>
     </BannerContainer>
   )
 }
