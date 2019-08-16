@@ -36,7 +36,7 @@ const ConsentBanner = () => {
 
   const consentAcceptedHandler = () => {
     reactGA.initialize('UA-140137818-1')
-    setCookie('consent', 'accepted')
+    setCookie('consent', 'accepted', { maxAge: 2147483647 })
   }
 
   const consentDeclineHandler = () => {
