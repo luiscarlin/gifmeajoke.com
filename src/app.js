@@ -3,15 +3,13 @@ import styled from 'styled-components'
 import { useSpring, animated } from 'react-spring'
 import Card from './components/Card'
 import Footer from './components/Footer'
-import Welcome from './components/Welcome'
+import Header from './components/Header'
 import ConsentBanner from './components/ConsentBanner'
 
 const AppContainer = styled(animated.div)`
-  display: flex;
   height: 100%;
-  flex-direction: column;
-  align-items: center;
   margin: 40px;
+  min-width: 300px;
 
   @media only screen and (max-width: 900px) {
     margin: 40px;
@@ -27,7 +25,7 @@ const App = () => {
 
   return (
     <AppContainer style={fadeIn}>
-      <Welcome />
+      <Header />
       <Card />
       <Footer />
       <ConsentBanner />
