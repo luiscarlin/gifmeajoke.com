@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const FooterContainer = styled.footer`
-  margin-top: 20px;
+  margin: 3rem;
   text-align: center;
 `
 

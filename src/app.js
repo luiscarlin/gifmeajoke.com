@@ -8,16 +8,7 @@ import ConsentBanner from './components/ConsentBanner'
 
 const AppContainer = styled(animated.div)`
   height: 100%;
-  margin: 40px;
   min-width: 300px;
-
-  @media only screen and (max-width: 900px) {
-    margin: 40px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    margin: 20px;
-  }
 `
 
 const App = () => {

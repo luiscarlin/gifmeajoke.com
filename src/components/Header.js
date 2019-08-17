@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ThemeToggle from './ThemeToggle'
 
 const HeaderContainer = styled.header`
-  margin-bottom: 2rem;
+  margin: 3rem;
 `
 
 const TitleContainer = styled.div`
