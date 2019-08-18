@@ -9,6 +9,7 @@ const BannerContainer = styled.div`
   background: ${props => props.theme.primaryFont};
   position: fixed;
   bottom: 0px;
+  left: 0px;
   font-size: 4rem;
   text-align: center;
   padding: 3rem;
