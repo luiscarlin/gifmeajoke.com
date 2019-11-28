@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import useDad from '../../hooks/useDad'
+import useDad from '../hooks/useDad'
 import { useSpring, animated } from 'react-spring'
 
 const CardContainer = styled(animated.div)`
